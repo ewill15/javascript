@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Abrir cambiar ventana</title>
+	<script type="text/javascript">
+	var ventana;
+		function info(){
+			var texto="";
+
+			texto += "Altura disponible : "+screen.availHeight +"px<br>";
+			texto += "Ancho disponible : "+screen.availWidth +"px<br>";
+			texto += "Altura : "+screen.height +"px<br>";
+			texto += "Ancho : "+screen.width +"px<br>";
+			texto += "Profundidad : "+screen.colorDepth +"px<br>";
+
+			document.getElementById("info").innerHTML = texto;
+		}
+	</script>
+</head>
+<body>
+	<button onclick="info()">Info Pantalla</button>
+	<p id="info"></p>
+<!--
+	Crear un HTML con un botón con texto “Info Pantalla”. 
+	La idea es que cuando se haga clic sobre el botón Info Pantalla, se muestre en el HTML el valor de las siguientes propiedades del objeto screen:
+
+        availHeight
+        availWidth
+        height
+        width
+        colorDepth
+-->	
+</body
+></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>actividad 54</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $.widget("com.miWidget", {
+            _create: function() {
+                this._div = $("<div>");
+                this._div.text("Mi div Widget!!!");
+                this._div.css("width", "300px");
+                this._div.css("border-style", "solid");
+                this._div.css("text-align", "center");
+                this._div.css("margin", "0 auto");
+
+                $(this.element).append(this._div);
+            },
+            animar: function() {
+                this._div.css("background-color", "blue");
+                this._div.toggle("explode", 4000);
+            }
+        });
+        $("#crear").click(function() {
+            $("#miDiv").miWidget();
+        });
+        $("#animar").click(function() {
+            $("#miDiv").miWidget("animar");
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!-- 
+Crear un widget con el nombre “miWidget”. 
+Este se va a crear en la estructura de un div con texto “Mi propio Widget” con las siguientes propiedades css: 
+width con el valor 300px, 
+border-style con el valor solid, 
+text-align con el valor center, 
+margin con el valor 0 auto. 
+
+Además tendrá un método llamado animar, el cual cambiará el color de fondo a blue y utilizará para animar el cual podrá ocultar o mostrar el div con un efecto explode que dure 4 segundos. 
+Se creará primero un div con id  “miDiv” 
+luego dos  botones el primero  con texto “Crear  Widget” que creará nuestro widget  dentro del  div con id “miDiv”  
+y el otro botón con texto “Animar Widget” el cual invocará el método animar de nuestro widget.
+-->
+    <div id="miDiv"></div>
+    <button id="crear">Crear widget</button>
+    <button id="animar">Animar Widget</button>
+</body>
+
+</html>

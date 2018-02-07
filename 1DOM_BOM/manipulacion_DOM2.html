@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulacion DOM-2</title>
+</head>
+<body>
+	<div id="miDiv">
+		Mi div!!!
+		<button onclick="cambiar()">Cambiar</button>
+	</div>
+	<script>
+	function cambiar(){
+		var texto = document.getElementById('miDiv');
+		texto.style.backgroundColor='blue';
+		texto.style.color='yellow';
+		texto.style.width='500px';
+		texto.style.height='500px';
+		texto.style.fontSize='xx-large';
+	}
+	</script>
+<!-- 
+	Crear un documento HTML que contenga un div id “miDiv” y con el texto “Mi div !!!”. Luego crear un botón con el texto “Cambiar”. La idea es que cuando se haga clic sobre el botón, se cambie las siguientes propiedades css del div:
+
+        backgroundColor con el valor blue
+        color con el valor yellow
+        width con el valor 500px
+        height con el valor 500px
+        fontSize con el valor xx-large
+
+-->
+</body>
+</html>

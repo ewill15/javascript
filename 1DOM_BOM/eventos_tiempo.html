@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Actividad 1</title>
+	<script>
+	var contador=0;
+	var contador2=0;
+	var iniciarContador = null;
+	function conteo(){
+		
+		contador2 += 10;
+		alert(contador2);
+		if (contador2 == 150){
+			alert('Conteo terminado!!');
+			clearTimeout(iniciarContador);
+		}
+		iniciarContador = setTimeout(function(){conteo()},2000);
+	}
+	
+	</script>
+</head>
+<body>
+	<p id="numero"></p>
+	<button onclick="conteo()">Iniciar conteo</button>
+<!--
+	Crear un documento HTML que contenga una etiqueta párrafo <p> con  un id “numero”. Este elemento párrafo mostrará el incremento en 10 de  una variable de tipo numérica que se inicializará en cero cada 2 segundos. Esta acción la ejecutará un botón que tenga como texto “Iniciar Conteo”. Cuando el conteo llegue a 150, se detendrá el conteo  y mostrará un mensaje “Conteo terminado!!”
+-->	
+</body>
+</html>

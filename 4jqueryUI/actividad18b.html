@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>actividad 18b - select menu</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#equipos").selectmenu();
+    })
+    </script>
+    <style>
+    #equipos{
+        width: 150px;
+    }
+    </style>
+</head>
+<body>
+<!-- 
+Desarrollar una página en HTML que contenga las siguientes características: 
+
+        Una función en JQuery que haga uso de un widget de tipo SelectMenu.
+        El widget debe contener como mínimo 4 opciones para que el usuario seleccione. 
+
+--> 
+<h2>Select menu</h2>
+    <p>Seleccione una equipo:</p>
+    <select name="equipos" id="equipos">
+        <option value="Universitario">Universitario</option>
+        <option value="Blooming">Blooming</option>
+        <option value="Bolivar">Bolivar</option>
+        <option value="San Jose">San Jose</option>
+    </select>
+</body>
+</html>

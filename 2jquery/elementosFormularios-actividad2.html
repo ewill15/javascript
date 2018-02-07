@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Actividad - 2</title>
+	<style type="text/css">
+	#mensaje{
+		color: green;
+		font-weight: bolder;
+		font-size: 24px;
+	}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#carros').change(function(){
+			var mensaje = 'Seleccionados: ';
+			var $select = $('#carros');
+            //seleccionado = [];
+			$('#carros').find(':selected').each(function (){
+				mensaje += $(this).text()+' - ';
+			});
+            //seleccion = $('option:selected',$select).text(); 
+            
+			$('#mensaje').html(mensaje);
+		});
+	});
+	</script>
+
+</head>
+<body>
+<!-- 
+Desarrollar un documento HTML que contenga lo siguiente:
+
+        Un título h1 que diga Carros
+        Una lista de carros donde las opciones son:
+            Toyota
+            Chevrolet 
+            Nissan
+            Jeep 
+            Hyundai 
+            Ford 
+            Renault
+            Ferrari
+            Mazda
+            Suzuki 
+            Mercedes
+            BMW
+            Audi
+            Peugeot
+            Fiat
+            Daihatsu
+            Mitsubishi
+            Isuzu
+        Un div donde se muestren los elementos que están seleccionados o que selecciona el usuario de la lista.
+        Esto se debe mostrar con un color azul y un tamaño de texto de 25px.
+-->
+<h1>Carros</h1>
+<select multiple="multiple" id="carros">	
+		<option>Toyota</option>
+		<option>Chevrolet</option>
+		<option>Nisan</option>
+		<option>Jeep</option>
+		<option>Hyundai</option>
+		<option>Ford</option>
+		<option>Renault</option>
+		<option>Ferrari</option>
+		<option>Mazda</option>
+		<option>Suzuki</option>
+		<option>Mercedes</option>
+		<option>BMW</option>
+		<option>Audi</option>
+		<option>Peugeot</option>
+		<option>Fiat</option>
+		<option>Daihatsu</option>
+		<option>Mitsubishi</option>
+		<option>Isuzu</option>
+	</select>
+<div id="mensaje">Seleccionados: </div>
+</body>
+</html>

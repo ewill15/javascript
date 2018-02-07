@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hide - show</title>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+	<style>
+	.miEstilo1{
+		background-color: red;
+		border-top: groove;
+		width: 200px;
+		height: 200px;
+	}
+	</style>
+	<script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#boton1").click(function(){
+    		$("#miDiv1").hide("explode",4000);
+    	});
+    	$("#boton2").click(function(){
+    		$("#miDiv1").show("shake",4000);
+    	});
+    });
+    </script>
+</head>
+<body>
+	<div id="miDiv1" class="miEstilo1"></div>
+	<button id="boton1">Ocultar</button>
+	<button id="boton2">Mostrar</button>
+</body>
+</html>

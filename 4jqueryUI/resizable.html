@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resizable</title>	
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
+	<script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <style>
+	#tama{
+		width: 100px;
+		height: 100px;
+		background: #CCC;
+	}
+    </style>
+</head>
+<body>
+	<p>Utilizando Resizable</p>
+	<input type="button" id="tama" value="Ejemplo">
+	<script>
+	$(document).ready(function(){
+		$("#tama").resizable();
+	});
+	</script>
+</body>
+</html>

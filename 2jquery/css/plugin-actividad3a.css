@@ -1,0 +1,19 @@
+.nombre,.apellidos,.telefono,.email{
+	width:5%;
+	float: left;
+}
+#nombre,#apellidos,#telefono,#email{
+	width:150px;
+}
+input{
+	margin-bottom: 15px;
+	border-radius: 5px;
+	border: 1px solid #0B40A9
+}
+#enviar{
+	background-color: blue;
+	font-size:13px;
+	font-weight: bolder;
+	color: #FFF;
+	padding: 5px 4px 5px 7px
+}

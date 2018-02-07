@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>actividad 34</title>
+	<style>
+	.miEstilo{
+		background-color: brown;
+		width: 400px;
+		height: 400px;
+	}
+	</style>
+	<script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function(){
+    	$("#boton1").click(function(){
+    		$("#miDiv").effect("drop",4000,function(){
+    			$(this).show();
+    		});    		
+    	});
+    });
+    </script>
+</head>
+<body>
+<!--
+Crear un HTML que contenga:
+
+        Una clase CSS llamada miEstitlo con las propiedades background-color con el valor brown, width con el valor de 400px y height con el valor de 400px.
+        Crear un div con id “miDiv” y con el atributo class con el valor de la clase css creada en el punto anterior y llamada miEstilo; con el texto “Mi div!!”.
+        Crear un botón con id “boton1” con el texto “Efecto drop!”. La idea es que cuando se de clic sobre el botón se aplique un efecto drop que dure 4 segundos al div y al terminar el efecto mostrar de nuevo el div.
+-->	
+<div id="miDiv" class="miEstilo"><p>Mi DIV!!!</p></div>
+<button id="boton1">Efecto drop!!!</button>
+</body>
+</html>

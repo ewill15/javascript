@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio sobre DOM</title>
+<script type="text/javascript">
+	var cambiartexto = document.getElementById("texto1").childNodes[0].nodeValue;
+	document.getElementById("texto2").innerHTML = cambiartexto;
+
+	function tipos(){
+		var texto="";
+		var div=document.getElementsByTagName("div")[0];
+
+		for (var i=0;i<div.childNodes.length;i++){
+			texto+=div.childNodes[i].nodeName+"<br>";	
+		}
+		document.getElementById("mensaje").innerHTML= texto;
+	}
+	function primerElemento(){
+		var texto="";
+			var elemento=document.getElementsByTagName("div")[0];
+			var mensaje=document.getElementById("mensaje");
+
+			mensaje.innerHTML = "Primer elemento del div: "+elemento.firstChild.nodeName;
+	}
+	function ultimoBoton(){
+		var elemento=document.getElementsByTagName("button")[0];
+			var mensaje=document.getElementById("mensaje");
+
+			mensaje.innerHTML = "Ultimo Boton es : "+elemento.lastChild.nodeName;
+	}
+</script>
+
+</head>
+<body>
+	<h1 id="texto1">Primer Texto</h1>
+	<p id="texto2">Segundo Texto</p>
+	<br>
+    <h1>Elementos</h1>    
+    <div>
+    	<p>Nombre</p>
+	    <input type="text">
+	    <button>Aceptar</button>
+	    <br>
+	    <br>
+	    <button type="button" onclick="tipos()">Ver tipo de elementos</button>
+		<button type="button" onclick="primerElemento()">Primer Elemento</button>
+		<button type="button" onclick="ultimoBoton()">Ultimo Elemento</button>
+		<p id="mensaje"></p>
+    </div>
+	
+<!--
+	Crear un código HTML que contenga una etiqueta h1 con id=”texto1” y muestre la frase “Primer Texto”, y otra etiqueta p con id=”texto2” que muestre la frase “Segundo Texto”. Crear un script que permita cambiar el texto que tiene el elemento p por el mensaje que tiene la etiqueta h1 utilizando la propiedad childnodes y que este comando esté asignado a una variable llamada cambiartexto. 
+
+Después de esto, agregar una etiqueta h1 que muestre el mensaje “Elementos”, y agregar un párrafo que diga Nombre, con un input de tipo texto y un botón con valor aceptar dentro de un div.
+
+        Se debe crear un botón que permita mostrar los tipos de elementos que se encuentran en el div.
+        Se debe crear un botón que permita ver cuál es el primer elemento que se encuentra dentro del div.
+        Se debe crear otro botón que permita saber cuál es el último botón que está dentro del div.
+        Esto se debe mostrar en una etiqueta párrafo después de estos botones.
+
+-->	
+</body>
+</html>

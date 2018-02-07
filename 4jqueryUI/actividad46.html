@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>actividad 46 - switchClass</title>
+    <style>
+    .miEstilo1 {
+        background-color: #09FFEB;
+        width: 200px;
+        height: 200px;
+    }
+
+    .miEstilo2 {
+        background-color: #BA09FF;
+        width: 500px;
+        height: 500px;
+    }
+    </style>
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#miDiv").mouseover(function(){
+    		$(this).switchClass("miEstilo1","miEstilo2","easeInQuint");
+    	});
+    	$("#miDiv").mouseout(function(){
+    		$(this).switchClass("miEstilo2","miEstilo1","easeOutQuint");
+    	});
+    });
+    </script>
+
+</head>
+<body>
+<!-- 
+Crear un HTML que contenga:
+
+        Dos clases css, una llamada miEstitlo1 con las propiedades background-color con el valor  #09FFEB, width con el valor de 200px y height con el valor de 200px. La otra clase llamada miEstilo2 con las propiedades background-color con el valor #BA09FF, width con el valor de 500px y height con el valor de 500px.
+        Crear un div con id “miDiv” y con el atributo class con el valor de la clase css creada en el punto anterior y llamada miEstilo1; con el texto “Mi div!!”
+        La idea es que cuando el cursor del mouse esté sobre el div se remueva la clase miEstilo1 y se agregue la clase miEstilo2 ejecutando la función easeInQuint. Y cuando el cursor del mouse se salga del div se remueva la clase miEstilo2 y se agregue la clase miEstilo1 ejecutando la función easeOutQuint.
+-->	
+<div id="miDiv" class="miEstilo1">
+	Mi Div!!!
+</div>
+</body>
+</html>

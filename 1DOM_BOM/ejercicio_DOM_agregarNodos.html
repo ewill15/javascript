@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Agregando nodos</title>
+</head>
+<body>
+<!--
+	Construir un archivo HTML donde se pueda adicionar tres nodos a tres elementos de tipo párrafo en nuestro documento HTML.
+-->	
+	<script type="text/javascript">
+	var parrafo1 = document.createElement("p");
+	var parrafo2 = document.createElement("p");
+	var parrafo3 = document.createElement("p");
+
+	var texto_p1 = document.createTextNode("Parrafo 1!!!");
+	var texto_p2 = document.createTextNode("Parrafo 2!!!");
+	var texto_p3 = document.createTextNode("Parrafo 3!!!");
+
+	parrafo1.appendChild(texto_p1);
+	parrafo2.appendChild(texto_p2);
+	parrafo3.appendChild(texto_p3);
+
+	document.body.appendChild(parrafo1);
+	document.body.appendChild(parrafo2);
+	document.body.appendChild(parrafo3);
+	</script>
+</body>
+</html>

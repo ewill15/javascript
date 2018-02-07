@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Efecto blind</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <style>
+    .miEstilo1 {
+        background-color: yellow;
+        color: green;
+        font-size: 30px;
+        width: 400px;
+        height: 400px;
+    }
+    </style>
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#opciones").change(function() {
+            var opcion = $(this).val();
+            var direccion = "";
+
+            switch (opcion) {
+                case "up":
+                    direccion = "up";
+                    break;
+                case "down":
+                    direccion = "down";
+                    break;
+                case "left":
+                    direccion = "left";
+                    break;
+                case "right":
+                    direccion = "right";
+                    break;
+                case "vertical":
+                    direccion = "vertical";
+                    break;
+                case "horizontal":
+                    direccion = "horizontal";
+                    break;
+            }
+            $("#miDiv1").effect("blind", { direction: direccion }, 3000, function() {
+                $(this).show();
+            });
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <h1>Opciones Efecto Blind</h1>
+    <select name="" id="opciones">
+        <option value="">Seleccione una opcion...</option>
+        <option value="up">Up</option>
+        <option value="down">Down</option>
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+        <option value="vertical">Vertical</option>
+        <option value="horizontal">Horizontal</option>
+    </select>
+    <br>
+    <br>
+    <div id="miDiv1" class="miEstilo1">
+        Mi div1!!!
+    </div>
+</body>
+
+</html>

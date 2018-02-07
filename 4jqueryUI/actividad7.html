@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 
+	Utilizar la función o plugin Sortable para seleccionar uno o más elementos de una lista en HTML y arrastrarlos a otra y viceversa. Estos elementos simularán una colección de juguetes, los cuales los debemos arrastrar entre dos listas; una lista representarán dichos juguetes, y la otra el baúl donde debemos guardarlos. 
+
+Se debe acompañar la página con un estilo CSS.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>actividad 7 - sortable</title>
+    <style type="text/css">
+	ul{
+		margin: 0;
+	}
+    .juguete{
+        background: red;
+        padding: 5px 5px 5px 5px;
+        width: 100px;
+        color: #FFFFFF;
+        margin: 0 0 10px 0;
+        list-style-type: none;
+    }
+
+    </style>
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#baul").sortable();
+        $("#toys").sortable();
+        $("#baul").sortable({
+            connectWith: '#toys,#baul'
+        });
+        $("#toy").sortable({
+            connectWith: '#baul,#toys'
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Juguetes</h1>
+        <ul id="toys">
+            <li class="juguete">Carro</li>
+            <li class="juguete">Muñeca</li>
+            <li class="juguete">Oso</li>
+            <li class="juguete">Caballo</li>
+            
+        </ul>
+    </div>
+    <div>
+        <h1>Baul</h1>
+        <ul id="baul">
+            <li class="juguete">Peluche</li>
+            <li class="juguete">Soldado</li>
+        </ul>
+    </div>
+</body>
+
+</html>

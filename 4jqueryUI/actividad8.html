@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- 
+	Desarrollar en un archivo HTML lo siguiente:  Crear tres divs; el primer div contiene la fruta “Manzana” en una lista, el segundo div contiene un carro “Toyota” en una lista, y el tercer div contiene el siguiente listado de frutas y carros:
+
+        Maracuya         Chevrolet        Fresa        Uva        Hyundai        Renault        Mitsubishi
+        Ford             Mora             Jeep         Kia        Nissan        Tamarindo       Guayaba
+        Guanábana        Sapote
+
+Antes de cada div debe haber un título h1 que diga Frutas, Carros y Elementos respectivamente.
+
+Se debe implementar una función que permita mover las frutas y carros para cada uno de los divs correspondientes.
+
+Cada vez que se realice un movimiento de una lista a otra, se debe mostrar un mensaje de start, receive y stop para cada lista.
+
+Estos divs deben tener un estilo: que el color de fondo sea rojo, un padding, un width para que los elementos se muestren de forma rectangular, y el color de letras blancas.
+
+Las imágenes muestran como debe ser el resultado inicial y final.
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Actividad 8</title>
+	<style type="text/css">
+	ul{
+		margin: 0;
+	}
+    .frutas-carros-elementos{
+        background: red;
+        padding: 5px 5px 5px 5px;
+        width: 100px;
+        color: #FFFFFF;
+        margin: 0 0 10px 0;
+    }
+
+    </style>
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	var mensaje = "";
+    	$(".frutas-carros").sortable({
+    		start: function (event,ui){
+    			$("#mensaje").html(mensaje += "Evento start desde frutas!<br>");
+    		},
+    		receive: function(event,ui){
+    			$("#mensaje").html(mensaje += "Evento receive desde frutas!<br>");
+    		},
+    		stop:function (event,ui){
+    			$("#mensaje").html(mensaje += "Evento stop desde frutas!<br>");
+    		}
+    	});
+    	$("#carros").sortable({
+    		start: function (event,ui){
+    			$("#mensaje").html(mensaje += "Evento start desde carros!<br>");
+    		},
+    		receive: function(event,ui){
+    			$("#mensaje").html(mensaje += "Evento receive desde carros!<br>");
+    		},
+    		stop:function (event,ui){
+    			$("#mensaje").html(mensaje += "Evento stop desde carros!<br>");
+    		}
+    	});
+    	$("#elementos").sortable({
+    		start: function (event,ui){
+    			$("#mensaje").html(mensaje += "Evento start desde elementos!<br>");
+    		},
+    		receive: function(event,ui){
+    			$("#mensaje").html(mensaje += "Evento receive desde elementos!<br>");
+    		},
+    		stop:function (event,ui){
+    			$("#mensaje").html(mensaje += "Evento stop desde elementos!<br>");
+    		}
+    	});
+    	$("#frutas").sortable({
+    		connectWith: '#frutas,#carros,#elementos'
+    	});
+    	$("#carros").sortable({
+    		connectWith: '#frutas,#carros,#elementos'
+    	});
+    	$("#elementos").sortable({
+    		connectWith: '#frutas,#carros,#elementos'
+    	});
+    })
+    </script>
+</head>
+<body>
+	<div>
+		<h1>Frutas</h1>
+		<ul id="frutas">
+			<li class="frutas-carros-elementos">Manzana</li>
+		</ul>
+	</div>
+	<div>
+		<h1>Carros</h1>
+		<ul  id="carros">
+			<li class="frutas-carros-elementos">Toyota</li>
+		</ul>
+	</div>
+	<div>
+		<h1>Elementos</h1>
+		<ul id="elementos">
+			<li class="frutas-carros-elementos">Maracuya</li>
+			<li class="frutas-carros-elementos">Chevrolet</li>
+			<li class="frutas-carros-elementos">Fresa</li>
+			<li class="frutas-carros-elementos">Uva</li>
+			<li class="frutas-carros-elementos">Hyundai</li>
+			<li class="frutas-carros-elementos">Renault</li>
+			<li class="frutas-carros-elementos">Mitsubishi</li>
+			<li class="frutas-carros-elementos">Ford</li>
+			<li class="frutas-carros-elementos">Mora</li>
+			<li class="frutas-carros-elementos">Jeep</li>
+			<li class="frutas-carros-elementos">Kia</li>
+			<li class="frutas-carros-elementos">Nissan</li>
+			<li class="frutas-carros-elementos">Tamarindo</li>
+			<li class="frutas-carros-elementos">Guayaba</li>
+			<li class="frutas-carros-elementos">Guanábana</li>
+			<li class="frutas-carros-elementos">Sapote</li>
+		</ul>
+	</div>
+	<p id="mensaje"></p>
+</body>
+</html>

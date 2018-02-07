@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>actividad 18 - TAB</title>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script>
+$(document).ready(function(){
+	var tab = $("#tab").tabs();
+	tab.find(".ui-tabs-nav").sortable({
+		axis: "x",
+		stop: function(){
+			tab.tabs("refresh");
+		}
+	})
+});
+    </script>
+</head>
+<body>
+<!-- 
+Desarrollar una página en HTML que contenga las siguientes características: 
+
+        Una función en JQuery que haga uso de un widget de tipo Tab. 
+        El widget debe contener como mínimo 4 tabs, cada uno con su título y su párrafo en el interior.
+        Se debe hacer uso del atributo Sortable, para cambiar de posición cada uno de los tabs.
+-->	
+<div id="tab">
+		<ul>
+			<li><a href="#html">HTML</a></li>
+			<li><a href="#javascript">javascript</a></li>
+			<li><a href="#jquery">jquery</a></li>
+			<li><a href="#sql">SQL</a></li>
+		</ul>
+		<div id="html">Es un lenguaje utilizado para el desarrollo de páginas web.<br>
+			<p>Podemos utilizar cualquier editor de texto para editar o manipular el contenido
+			de un documento HTML
+		</p>
+		</div>
+		<div id="javascript">
+			<p>Es un lenguaje que nos permite crear pequeños programas que se insertan en páginas web.<br>
+			Javascript nos permite crear efectos dinamicos para nuestras páginas web</p>
+		</div>
+		<div id="jquery">
+			<p>Son librerias o ficheros de javascript, que nos facilitan ejecutar tareas en páginas web.<br>
+				JQuery nos permite implementar procesos ya listos para usar, facilitandonos la solución de tareas basicas</p>
+		</div>
+		<div id="sql">
+			<p>Lenguaje de consulta estructurado utilizado en bases de datos SQL</p>
+		</div>
+	</div>
+</body>
+</html>

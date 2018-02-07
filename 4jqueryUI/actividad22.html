@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>actividad 22</title>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <style>
+    .miEstilo1 {
+        font-style: italic;
+        font-size: 40;
+        color: #FF8901;
+    }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+        	$("#boton1").click(function(){ 
+        		$("#parrafo1").addClass("miEstilo1",3000,"easeInCirc"); 
+        	});
+        	$("#boton2").click(function(){
+        		$("#parrafo1") .removeClass("miEstilo1",3000,"easeInOutCubic"); 
+        	});
+        });
+    </script>
+</head>
+<body>
+<!-- 
+Crear un HTML que contenga una clase css llamada miEstilo1 que indique que el estilo de la fuente sea italica, el tamaño de la fuente sea de 40 pixeles, y el color de la fuente sea  #FF8901.
+ La idea es crear un parrafo con id  “parrafo1” que tenga como texto “El ignorante afirma, el sabio duda y reflexiona.” y dos botones; uno con id “boton1” y texto “Agregar clase!” y el otro con id “bototn2” y texto “Remover clase!”.
+  El primer botón ejecutará la acción de agregar la clase miEstilo1 con un efecto easeInCirc que dure 3 segundos, y el segundo botón ejecutará la acción de remover la clase miEstilo1 con un efecto easeInOutCubic que dure 3 segundos.
+-->	
+<p id="parrafo1">El ignorante afirma, el sabio duda y reflexiona</p>
+<button id="boton1">Agregar clase</button>
+<button id="boton2">Remover Clase</button>
+</body>
+</html>

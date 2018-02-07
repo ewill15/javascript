@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Producto</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+			<th>Subtotal</th>
+		</tr>
+		<tbody>
+			<tr>
+				<td>Camisa</td>
+				<td><input type="text" readonly="readonly" value="30000" id="precioCamisa"/></td>
+				<td><input type="text" id="cantidadCamisa"/></td>
+				<td><input type="text" readony="readonly" id="TotalCamisa"/></td>
+			</tr>
+			<tr>
+				<td>Gorra</td>
+				<td><input type="text" readonly="readonly" value="50000" id="precioGorra"/></td>
+				<td><input type="text" id="cantidadGorra"/></td>
+				<td><input type="text" readony="readonly" id="TotalGorra"/></td>
+			</tr>
+			<tr>
+				<td>Zapatos</td>
+				<td><input type="text" readonly="readonly" value="60000" id="precioZapato"/></td>
+				<td><input type="text" id="cantidadZapato"/></td>
+				<td><input type="text" readony="readonly" id="TotalZapato"/></td>
+			</tr>
+			<tr>
+				<td>Pantalon</td>
+				<td><input type="text" readonly="readonly" value="80000" id="precioPantalon"/></td>
+				<td><input type="text" id="cantidadPantalon"/></td>
+				<td><input type="text" readony="readonly" id="TotalPantalon"/></td>
+			</tr>
+			<tr>
+				<td colspan="60">
+					<input type="text" readonly="readonly" id="total">
+				</td>
+			</tr>
+		</tbody>		
+	</table>
+	<button onclick="calcularSubTotales()">Calcular Subtotales</button>
+	<button onclick="calcularTotal()">Calcular Total</button>
+	<script>
+	/*
+       La columna Precio está formada por inputs con sus respectivos ids, que no se podrán editar con los respectivos valores. La columna Cantidad está formada por sus respectivos ids. Estos inputs sí son editables ya que se podrá asignar la cantidad del producto que se va a comprar. Por último está la columna Subtotal, que está formada por inputs con sus respectivos ids, los cuales no son editables.
+
+Crear un input con su id y con el texto “Total Compra:”, el cual mostrará el total de la compra.
+
+Luego crear dos botones. El primer botón tendrá el texto “Calcular Subtotales”, y al hacer clic sobre el botón calcular los subtotales de cada producto comprado. El segundo botón, con texto “Calcular Total”, calculará el total de la compra  realizando la respectiva sumatoria de subtotales. 
+	*/
+	var totales=0;
+	var subtotalCamisa=0;
+	var subtotalGorra=0;
+	var subtotalZapato=0;
+	var subtotalPantalon=0;
+	function calcularSubTotales(){
+		var precioCamisa=document.getElementById("precioCamisa").value;
+		var precioGorra=document.getElementById("precioGorra").value;
+		var precioZapato=document.getElementById("precioZapato").value;
+		var precioPantalon=document.getElementById("precioPantalon").value;
+
+		var cantidadCamisa=document.getElementById("cantidadCamisa").value;
+		var cantidadGorra=document.getElementById("cantidadGorra").value;
+		var cantidadZapato=document.getElementById("cantidadZapato").value;
+		var cantidadPantalon=document.getElementById("cantidadPantalon").value;
+
+		subtotalCamisa=precioCamisa*cantidadCamisa;
+		subtotalGorra=precioGorra*cantidadGorra;
+		subtotalZapato=precioZapato*cantidadZapato;
+		subtotalPantalon=precioPantalon*cantidadPantalon;
+
+		document.getElementById("TotalCamisa").value=subtotalCamisa;
+		document.getElementById("TotalGorra").value=subtotalGorra;
+		document.getElementById("TotalZapato").value=subtotalZapato;
+		document.getElementById("TotalPantalon").value=subtotalPantalon;
+	}
+	function calcularTotal(){
+		totales = subtotalCamisa+subtotalGorra+subtotalZapato+subtotalPantalon;
+
+		document.getElementById("total").value="Total Compra "+totales;
+	}
+
+	</script>
+</body>
+</html>

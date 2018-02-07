@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery - UI Examples</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#miAccordion").accordion();
+
+        var valores = [
+            "Camerun",
+            "Colombia",
+            "Chile",
+            "Croacia",
+            "Chipre"
+        ];
+
+        $("#cjatxt1").autocomplete({
+            source: valores
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <h2></h2>
+    <div id="miAccordion">
+        <h3>Seccion 1</h3>
+        <div>Contenido 1...</div>
+        <h3>Seccion 2</h3>
+        <div>Contenido 2...</div>
+        <h3>Seccion 3</h3>
+        <div>Contenido 3...</div>
+    </div>
+    <h2>Autocomplete</h2>
+    <input type="text" id="cjatxt1">
+</body>
+
+</html>

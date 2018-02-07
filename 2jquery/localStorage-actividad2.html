@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Local Storage 2- actividad2</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+	function editarVehiculo(id){
+		var vehiculo;
+		for (var i = 0;i<localStorage.length; i++) {
+		 var clave = localStorage.key(i);
+		 if(clave == id){
+		 	vehiculo = $.parseJSON(localStorage.getItem(clave));
+
+		 	$("#placa").val(vehiculo.placa);
+		 	$("#marca").val(vehiculo.marca);
+		 	$("#modelo").val(vehiculo.modelo);
+		 }
+		}
+	}
+	function listarNotas(){
+		var tabla = "";
+		var parrafo1 = $("#p1");
+
+		tabla += "<table border=\'1\'>";
+		tabla += "<tr>";
+		tabla += "<th>PLACA</th>";
+		tabla += "<th>MARCA</th>";
+		tabla += "<th>MODELO</th>";
+		tabla += "<th>EDITAR</th>";
+		tabla += "<th>ELIMINAR</th>";
+		tabla += "</tr>";
+
+		for (var i=0;i<localStorage.length;i++){
+			var clave = localStorage.key(i);
+			var vehiculo = $.parseJSON(localStorage.getItem(clave));
+
+			tabla += "<tr>";
+			tabla += "<td>"+vehiculo.placa+"</td>";
+			tabla += "<td>"+vehiculo.marca+"</td>";
+			tabla += "<td>"+vehiculo.modelo+"</td>";
+			tabla += "<td><button onclick='editarNota(\""+vehiculo.placa+"\");'>Editar</button></td>";
+			tabla += "<td><button onclick='eliminarNota(\""+vehiculo.placa+"\");'>Eliminar</button></td>";
+			tabla += "</tr>";
+		}
+		
+		tabla += "</table>";
+		$(parrafo1).html(tabla);
+	}
+	function eliminarNota(id){
+		localStorage.removeItem(id);
+		listarNotas();
+	}
+	$(document).ready(function(){
+		var contador;
+		if (localStorage.length>0){
+			contador = localStorage.length+1;			
+		}else{
+			contador = 1;
+		}
+
+		$("#placa").val(contador);
+		$("#boton1").click(function(){
+			var placa = $("#placa").val();
+			var marca = $("#marca").val();
+			var modelo = $("#modelo").val();
+
+			var vehiculos = {
+				placa:placa,
+				marca:marca,
+				modelo:modelo
+			};
+			
+			localStorage.setItem(placa,JSON.stringify(vehiculos));
+			contador = localStorage.length+1;
+
+			listarNotas();
+			restablecer();
+		});
+		$("#boton2").click(function(){
+			restablecer();
+		});
+
+		function restablecer(){
+			$("#placa").val(contador);
+			$("#marca").val("");
+			$("#modelo").val("");
+		}
+
+		listarNotas();
+		$("#modelo").val();
+		
+
+	});
+	</script>	
+</head>
+<body>
+	<h1>Registro de Vehiculos</h1>
+	<form>
+		Placa:
+		<br>
+		<input type="text" id="placa">
+		<br>
+		Marca:<br>
+		<input type="text" id="marca">
+		<br>
+		Modelo:<br>
+		<input id="modelo" type="text"/>
+	</form>
+
+	<button id="boton1">Guardar</button>
+	<button id="boton2">Restablecer</button>
+
+	<p id="p1"></p>
+</body>
+</html>

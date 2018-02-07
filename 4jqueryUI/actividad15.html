@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>actividad 15 - progressbar</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <style>
+	#contenedor{
+		width: 30%;
+	}
+    </style>
+    <script>
+    $(document).ready(function() {
+        $("#barra1").progressbar({
+            value: 20
+        });
+        $("#barra2").progressbar({
+            value: 70
+        });
+        $("#barra3").progressbar({
+            value: false
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!-- 
+Desarrollar una página en HTML que contenga las siguientes características: 
+
+        Una función en JQuery que haga uso de tres widget de tipo ProgressBar.
+        Dos de las barras de progreso deben ser de tipo determinada, con un valor de 20% y 70% respectivamente. La otra de progreso debe ser de tipo indeterminada.
+-->
+<div id="contenedor">
+	<h2>Barra 1</h2>
+    <div id="barra1"></div>
+    <h2>Barra 2</h2>
+    <div id="barra2"></div>
+    <h2>Barra 3</h2>
+    <div id="barra3"></div>	
+</div>
+    
+</body>
+
+</html>

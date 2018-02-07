@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>actividad 21</title>
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <style>
+    .miEstilo1 {
+        background-color: #6F0C90;
+        color: #EBFF01;
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#boton1").click(function() {
+            $("#div1").addClass("miEstilo1", 3000, "easeInBounce");
+        });
+        $("#boton2").click(function() {
+            $("#div1").removeClass("miEstilo1", 3000, "easeInOutCirc");
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!-- 
+Crear un HTML que contenga una clase css llamada miEstilo1 que indique que el color de fondo del elemento sea el valor #6F0C90 y el color del texto sea el valor #EBFF01, y con un ancho y alto de 200px. 
+La idea es crear un div con id “div1” que tenga como texto “Mi div!!” y dos botones; uno con id “boton1” y texto “Agregar clase!” y el otro con id “bototn2” y texto “Remover clase!”. 
+El primer botón ejecutará la acción de agregar la clase miEstilo1 con un efecto easeInBounce que dure 3 segundos, y el segundo botón ejecutará la acción de remover la clase  miEstilo1 con un efecto easeInOutCirc que dure 3 segundos.
+-->
+    <div id="div1">
+        <p>Mi Div!!!</p>
+    </div>
+    <button id="boton1">Agregar clase</button>
+    <button id="boton2">Remover clase</button>
+</body>
+
+</html>

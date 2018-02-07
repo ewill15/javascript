@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Objeto Literal - Propiedades</title>
+	<script src="js/jquery-1.12.4.js"></script>
+</head>
+<body>
+<!-- 
+La idea es que al hacer clic sobre el botón Registrar Empleado, se almacene temporalmente en un objeto literal los campos del formulario y se limpien los campos. Las propiedades del objeto serán las mismas que están en el formulario. Por su parte al hacer clic sobre el botón Mostar Empleado se imprimirá en el navegador los datos del empleado.
+-->
+	<h1>Datos de un Empleado</h1>
+    <label for="cjtxt1">Codigo</label>
+    <input type="text" id="cjtxt1">
+    <br><br>
+    <label for="cjtxt2">Nombre</label>
+    <input type="text" id="cjtxt2">
+    <br><br>
+    <label for="cjtxt3">Direccion</label>
+    <input type="text" id="cjtxt3">
+    <br><br>
+    <label for="cjtxt4">Telefono </label>
+    <input type="text" id="cjtxt4">
+    <br><br>
+    <label for="cjtxt5">E-mail</label>
+    <input type="text" id="cjtxt5">
+    <br><br>
+    <input type="button" value="Registrar Empleado" onclick="registrarEmpleado()">
+    <input type="button" value="Mostrar Empleado" onclick="mostrarEmpleado()">
+    <br><br>
+    <p id="mensaje"></p>
+	<script type="text/javascript">
+	//objeto literal llamado empleado
+	var empleado = {
+		codigo:null,
+		nombre:null,
+		direccion:null,
+		telefono:null,
+		email:null,
+
+		icodigo:function(propiedades){
+			empleado.propiedades = propiedades;
+		},
+		leerPropiedades : function (){
+			return empleado.propiedades;
+		}
+	};
+	function registrarEmpleado(){
+		var codigo = document.getElementById("cjtxt1").value;
+		var nombre = document.getElementById("cjtxt2").value;
+		var direccion = document.getElementById("cjtxt3").value;
+		var telefono = document.getElementById("cjtxt4").value;
+		var email = document.getElementById("cjtxt5").value;
+
+		var propiedades = {
+			codigo:codigo,
+			nombre:nombre,
+			direccion:direccion,
+			telefono:telefono,
+			email:email
+		}
+		empleado.init(propiedades);
+		limpiarCampos();
+		alert("Empleado registrado");
+	}
+	function mostrarEmpleado(){
+		var mensaje = "<h1>Empleado</h1>";
+		var propiedades = empleado.leerPropiedades();
+
+		mensaje += "Codigo "+propiedades.codigo+"<br>";
+		mensaje += "Nombre "+propiedades.nombre+"<br>";
+		mensaje += "Direccion "+propiedades.direccion+"<br>";
+		mensaje += "Telefono "+propiedades.telefono+"<br>";
+		mensaje += "E-mail "+propiedades.email+"<br>";
+
+		document.getElementById("mensaje").innerHTML = mensaje;
+
+	}
+	function limpiarCampo(){
+		document.getElementById("cjtxt1").value = "";
+		document.getElementById("cjtxt2").value = "";
+		document.getElementById("cjtxt3").value = "";
+		document.getElementById("cjtxt4").value = "";
+		document.getElementById("cjtxt5").value = "";
+	}
+	</script>
+</body>
+</html>

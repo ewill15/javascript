@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>actividad 53 - position</title>
+	<style>
+	#miDiv1 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #F8421E;
+    }
+
+    #miDiv2 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #F8BA1E;
+    }
+
+    #miDiv3 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #1E66F8;
+    }
+
+    #elementoObjetivo {
+        background-color: #050505;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 100px;
+        top: 50px;
+    }
+	</style>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#miDiv1").position({
+                my: "left",
+                at: "right",
+                of: "#elementoObjetivo"
+            });
+    	$("#miDiv2").position({
+                my: "bottom",
+                at: "top",
+                of: "#elementoObjetivo"
+            });
+    	$("#miDiv3").position({
+                my: "right",
+                at: "left",
+                of: "#elementoObjetivo"
+            });
+    });
+    </script>
+</head>
+<body>
+<!-- 
+Crear un HTML que contenga:
+
+        4  selectores de id css; 
+        el primero llamado miDiv1 que contenga las propiedades position con el valor absolute, width con el valor 50px, height con el valor 50px y background con el valor #F8421E. 
+        El segundo selector llamado miDiv2 que contenga las propiedades position con el valor absolute, width con el valor 50px, height con el valor 50px y background con el valor #F8BA1E.
+        El tercer selector llamado  miDiv3 que contenga las propiedades position con el valor absolute, width con el valor 50px, height con el valor 50px y background con el valor #1E66F8. 
+        Y el cuarto llamado elementoObjetivo que contenga las propiedades background con el valor #050505, position con el valor absolute, width con el valor 300px, height con el valor 300px, left con el valor 100px y top con el valor 50px.
+        
+        Luego crear cuatro divs; el primer div que será un div contenedor padre con id “elementoObjetivo”, el segundo div con id “miDiv1”, el tercer div con id “miDiv2”, y el cuarto div con id “miDiv3”.
+        La idea es posicionar la esquina del lado izquierdo del div con id “miDiv1” con el lado derecho del div con id “elementoObjetivo”, el lado inferior del div con id “miDiv2” con el lado superior del div con id “elementoObjetivo”, y el lado derecho del div con id “miDiv3” con el lado izquierdo del div con id “elementoObjetivo”.
+-->
+<div id="elementoObjetivo"></div>
+<div id="miDiv1">1</div>
+<div id="miDiv2">2</div>
+<div id="miDiv3">3</div>	
+</body>
+</html>

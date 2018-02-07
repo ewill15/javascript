@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/jquery.validate_11.js"></script>
+	<script>
+	$.validator.setDefaults({
+		submitHandler: function(){
+			alert("Inicio de sesion exitoso");
+			$("#usuario").val("");
+			$("#password").val("");
+		}
+	});
+	$(document).ready(function(){
+		var validator = $("#miForm").validate({
+			errorPlacement: function(error,element){
+				$(element).closest("form").find("label[for='"+element.attr("id")+"']").append(error);
+			},errorElement:"span",
+			messages:{
+				usuario:{
+					required: "(Por favor inrese su nombre de usuario)",
+					minlength: "(Debe tener minimo 3 caracteres)"
+				},
+				password: {
+					required: "(Por favor inrese su nombre de usuario)",
+					minlength: "(Debe tener minimo 3 caracteres)"
+					maxlength: "(Debe tener entre 5 y 12 caracteres)"	
+				}
+			}
+
+
+		});
+	});
+	</script>
+	<title>Plugins</title>
+	<style>
+	.miForm fieldset p label span.error{
+		color:red;
+	}
+	form.miForm{
+		width: 30em;
+		background-color: #40FF80;
+	}
+	form.miForm legend,form.miForm label{
+		color:#1711C4;
+	}
+	form.miForm fieldset{
+		border : 1px solid #999;
+		border-radius: 8px;
+		border-color: #1711C4;
+		box-shadow: 0 0 10px #999;
+	}
+	form.miForm label{
+		width: auto;
+		display: block;
+		float: none;
+	}
+	</style>
+</head>
+<body>
+	<h1>Plugin de validacion con jquery</h1>
+	<div id="miDiv">
+		<form method="get" class="miForm" id="miForm" action="">
+			<fieldset>
+				<legend>Iniciar Sesion</legend>
+					<p>
+						<label for="usuario">Nombre de usuario</label>
+						<input id="usuario" type="text" for="usuario" name="usuario" required minlength="3">
+					</p>
+					<p>
+						<label for="password">Contraseña</label>
+						<input type="password" name="password" id="password" maxlength="12" required minlength="5">
+					</p>
+					<p>
+						<input type="submit" class="submit" value="Iniciar">
+					</p>
+				
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

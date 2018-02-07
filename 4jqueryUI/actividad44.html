@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>actividad 44 - switchClass</title>
+    <style>
+    .miEstilo1 {
+        background-color: #C52FD9;
+        width: 200px;
+        height: 200px;
+    }
+
+    .miEstilo2 {
+        background-color: #3CE55B;
+        color: #FFF;
+        font-size: xx-large;
+        width: 400px;
+        height: 400px;
+    }
+    </style>
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#boton1").click(function(){
+    		$("#miDiv").switchClass("miEstilo1","miEstilo2","easeInElastic");
+    	});
+    	$("#boton2").click(function(){
+			$("#miDiv").switchClass("miEstilo2","miEstilo1","easeOutElastic");
+    	});
+    });
+    </script>
+</head>
+
+<body>
+    <!-- 
+Crear un HTML que contenga:
+
+        Dos clases css, 
+        una llamada miEstitlo1 con las propiedades background-color con el valor  #C52FD9, width con el valor de 200px y height con el valor de 200px. 
+        La otra clase llamada miEstilo2 con las propiedades background-color con el valor #3CE55B, color con el valor #fff, font-size con el valor de xx-large, width con el valor de 400px y height con el valor de 400px.
+        Crear un div con id “miDiv” y con el atributo class con el valor de la clase css creada en el punto anterior y llamada miEstilo1; con el texto “Mi div!!”
+        Crear dos botones, el primer botón con id “boton1” con el texto “Cambiar 1” y el segundo botón con id “boton2” con el texto “Cambiar 2”.
+        La idea es que cuando se de clic sobre el botón Cambiar 1 se remueva la clase miEstilo1 y se agregue la clase miEstilo2 ejecutando la función easeInElastic, y cuando se de clic en el botón Cambiar 2 se remueva la clase miEstilo2 y agregue la clase miEstilo1 ejecutando la función easeOutElastic,  
+-->
+    <div id="miDiv" class="miEstilo1">Mi Div!!!</div>
+    <button id="boton1">
+        Cambiar 1
+    </button>
+    <button id="boton2">Cambiar 2</button>
+</body>
+
+</html>

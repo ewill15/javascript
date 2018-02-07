@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cuadro Dialogo activado con Boton</title>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#dialog").dialog({
+    		autoOpen: false
+    	});
+    	$("#boton").button().click(function(event){
+    		$("#dialog").dialog("open");
+    	});
+    });
+    	</script>
+</head>
+<body>
+	<div id="dialog" title="Dialog">
+		<p>Es una ventana que se posiciona en una parte de nuestra pagina. Cuenta con una barra de titulo y 
+			un espacio de contenido. Podemos moverla, cambiar su tamaño y cerrarla mediane el ícono por defecto "X" que posee</p>
+	</div>
+	<button id="boton">Cuadro Dialogo</button>
+</body>
+</html>

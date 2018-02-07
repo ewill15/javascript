@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Propiedades Navagador</title>
+	<script>
+	function navegador(){
+
+		propiedades = "Nombre Navegador :"+navigator.appName+"<br>";
+		propiedades += "Nombre Codigo Navegador :"+navigator.appCodeName+"<br>";
+		propiedades += "Version :"+navigator.appVersion+"<br>";
+		propiedades += "Lenguaje :"+navigator.language+"<br>";
+		propiedades += "Plataforma :"+navigator.platform+"<br>";
+		propiedades += "Producto :"+navigator.product+"<br>";
+		propiedades += "Navegador en linea "+navigator.onLine+"<br>";
+		propiedades += "Java habilitado :"+navigator.javaEnabled()+"<br>";
+		propiedades += "user Agent :"+navigator.userAgent+"<br>";
+		propiedades += "Cookies habilitadas :"+navigator.cookieEnabled+"<br>";
+
+		document.getElementById("mensaje").innerHTML = propiedades;
+	}
+	</script>
+</head>
+<body onload="navegador()">
+	<h1>Información del Navegador</h1>
+
+	<p id="mensaje"></p>
+<!--
+Crear una página HTML en donde se defina un botón con texto “Mostrar Tipos MIME”. Al hacer clic sobre el, mostrar en pantalla los tipos MIME que soporta el navegador, pero solo los tipos MIME que sean los siguientes tipos:
+
+        application/x-shockwave-flash
+        application/java-deployment-toolkit
+        application/pdf
+-->	
+</body>
+</html>

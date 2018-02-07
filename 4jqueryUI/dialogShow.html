@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mostrar cuadro de dialogo</title>	
+	<style>
+	#contenedor{
+		width: 400px;
+		height: 150px;
+	}
+	#caja h3{
+		margin:0;
+		text-align: center;
+	}
+	</style>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+	<script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#boton").click(function(){
+    		$("#caja").show("scale",2000);
+    	});
+    	$("#caja").hide();
+    });
+    </script>
+</head>
+<body>
+	<div id="contenedor">
+		<div id="caja" class="ui-widget-content ui-corner-all">
+			<h3 class="ui-widgt-header">HTML</h3>
+			<p>Es un lenguaje utilizado para el desarrollo de paginas web. <br>
+			podemos utilizar cualquier editor de texto para modificar o manipular
+			el contenido de un documento HTML
+			 </p>
+		</div>
+	</div>
+	<button id="boton" class="ui-state-default ui-corner-all">Mostrar Efecto</button>
+</body>
+</html>

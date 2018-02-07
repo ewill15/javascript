@@ -1,0 +1,5 @@
+$(document).ready(function() {
+    $("img").click(function(){
+        $(this).parent().css({"background-color":"yellow"})
+    });
+});

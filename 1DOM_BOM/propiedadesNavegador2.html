@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Plugins</title>
+	<script>
+	function mostrarPlugins() {
+		var mensaje="";	
+		for (var i = 0; i < navigator.plugins.length; i++) {
+		    var mensaje+=navigator.plugins[i].type+"<br>";
+			
+		}
+	    document.getElementById("mensaje").innerHTML=mensaje;
+	}
+</script>
+</head>
+<body>
+
+<h2>Navegador del BOM</h2>
+  <button onclick="mostrarPlugins()">Mostrar Plugins</button>
+<p id="mensaje"></p>
+<!--
+Crear una página HTML en donde se defina un botón con el texto “Mostrar Plugins”. Al hacer clic sobre el, mostrar los plugins del   navegador en pantalla.
+-->
+</body>
+
+</html>

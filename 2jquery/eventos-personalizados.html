@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<title>Ejemplo</title>
+</head>
+<body>
+	<p id="mensaje">
+		Mensaje
+	</p>
+	<script>
+	$(document).ready(function(){
+		$(document).on("Frutas",{
+			fruta:"Fresa"
+		},function(event,arg1,arg2){
+			$("#mensaje").html(event.data.fruta+"<br>"+arg1+"<br>"+arg2);
+		});
+
+		$(document).trigger("Frutas",["Manzana","Pera"]);
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>First Child-ejemplo</title>
+	<script type="text/javascript">
+	function nodoPrimero(){
+		var texto="";
+		var div=document.getElementById("miDiv");
+		var mensaje=document.getElementById("mensaje");
+
+		mensaje.innerHTML = "Primer nodo del Dvi: "+div.firstChild.nodeName;//se utiliza la propiedad firstChild del div para obtener el primer  nodo hijo con su respectivo nodo para mostrar el elemento p con id mensaje.
+	}
+	</script>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>Encabezado 1</h1>
+		<p>Parrafo 1</p>
+		<p>Parrafo 2</p>
+		<button onclick="nodoPrimero()">Primer Nodo</button>
+		<p id="mensaje"></p>
+	</div>
+	
+</body>
+</html>

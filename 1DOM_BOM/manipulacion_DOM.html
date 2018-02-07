@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<script>
+
+	function cambiarFuente(){
+		
+		var textoA = document.getElementById("texto1");
+		var textoB = document.getElementById("texto2");
+
+		textoA.style.fontFamily = "Courier";
+		textoB.style.fontFamily = "Verdana";
+		
+	}
+	function cambiarColor(){
+		var textoC = document.getElementById("texto1");
+		var textoD = document.getElementById("texto2");
+
+		textoC.style.background="yellow";
+		textoD.style.background="blue";
+	}
+</script>	
+	<title>Manipulacion del DOM</title>
+</head>
+<body>
+	<p id="texto1">Mi primer Texto!</p>
+	<p id="texto2">Mi segundo Texto!</p>
+	<button onclick="cambiarFuente()">Cambiar Fuente</button>
+	<button onclick="cambiarColor()">Cambiar Color de Fondo</button>
+<!-- 
+	Crear un documento HTML que contenga dos etiquetas párrafo <p>; la primera etiqueta que tenga un id llamando texto1 y un texto “Mi primer texto!” y la segunda etiqueta que tenga un id llamado texto2 y un texto “Mi segundo texto!”. Después de crear las dos etiquetas párrafos, crear dos botones; el primer botón tiene como acción cambiar el tipo de fuente del primer texto a Courier New y la del segundo texto a Verdana. Y la acción del segundo botón será cambiar el color de fondo del primer párrafo a amarrillo y el segundo a azul.
+-->
+
+</body>
+</html>

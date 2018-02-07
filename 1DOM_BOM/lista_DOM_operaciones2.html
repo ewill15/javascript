@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM_operaciones-2</title>
+</head>
+<body>
+	<p>Parrafo 1</p>
+	<p>Parrafo 2</p>
+	<p>Parrafo 3</p>
+	<p>Parrafo 4</p>
+
+	<button onclick="cambiarEstilo()">Modificar Parrafos</button>
+	<script type="text/javascript">
+	function cambiarEstilo(){
+		var parrafo1 = document.getElementsByTagName("p")[0];
+		parrafo1.style.color="orange";
+		var parrafo4 = document.getElementsByTagName("p")[3];
+		parrafo4.style.color="red";
+		var parrafo3 = document.getElementsByTagName("p")[2];
+		parrafo3.innerHTML="Párrafo modificado!!";
+
+	}
+	</script>
+<!--
+Crear un documento HTML que contenga 4 etiquetas párrafos <p> con su respectivo texto “Mi párrafo 1”, ”Mi párrafo 2”, “Mi párrafo 3”, y “Mi párrafo 4“.  
+Crear un botón que tenga como acción 
+	cambiar el color de texto a naranja del primer párrafo
+	el último párrafo a rojo. 
+	Además modificar el texto del párrafo tres a “Párrafo modificado!!”.
+-->	
+</body>
+</html>

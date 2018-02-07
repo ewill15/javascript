@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#numeros").spinner({
+        	min: 10,
+        	max:50,
+
+        });
+        $("#numeros").spinner( "value", 10 );
+        
+    })
+    </script>
+</head>
+<body>
+<!-- 
+Desarrollar una página en HTML que contenga las siguientes características: 
+
+        Una función en JQuery que haga uso de un widget de tipo Spinner. 
+        El widget debe ser básico, y su valor máximo debe ser 50.
+        El valor inicial del widget debe ser 10.
+-->
+<h2>Spinner</h2>
+    <input type="text" id="numeros">
+    <br>
+</body>
+</html>

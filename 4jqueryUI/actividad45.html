@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>actividad 45</title>
+	<style>
+    .miEstilo1 {
+        background-color: #77EE07;
+        width: 200px;
+        height: 50px;
+    }
+1
+    .miEstilo2 {
+        background-color: #0760EE;
+        width: 300px;
+        height: 100px;
+    }
+    </style>
+    <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("#miInput").focus(function(){
+    		$(this).switchClass("miEstilo1","miEstilo2","easeInCirc");
+    	});
+    	$("#miInput").blur(function(){
+    		$(this).switchClass("miEstilo2","miEstilo1","easeOutCirc");
+    	});
+    });
+    </script>
+</head>
+<body>
+<!-- 
+Crear un HTML que contenga:
+
+        Dos clases css, una llamada miEstilo1 con las propiedades background-color con el valor  #77EE07, width con el valor de 200px y height con el valor de 50px. La otra clase llamada miEstilo2 con las propiedades background-color con el valor #0760EE, width con el valor de 300px y height con el valor de 100px.
+        Crear un input de tipo texto con id “miInput” y con el atributo class con el valor de la clase css creada en el punto anterior, miEstilo1.
+        La idea es que cuando el input tenga el foco se remueva el estilo miEstilo1 y se agregue el estilo miEstilo2 ejecutando la función easeInCirc. Y cuando se pierda el foco se remueva el estilo miEstilo2 y se agregue el estilo miEstilo1 ejecutando la función easeOutCirc.
+-->	
+<input type="text" id="miInput" class="miEstilo1">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ParseJSON</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var base_datos = "<xml version='1.0'><estudiante><codigo>001</codigo><nombres>Carlos</nombres><apellidos>Vergara</apellidos></estudiantes>";
+		var $xml = $(base_datos);
+
+		var $codigos = $xml.find('codigo');
+		var $nombres = $xml.find('nombres');
+		var $apellidos = $xml.find('apellidos');
+        
+        $('#codigos').html($codigos); 
+		$('#nombres').html($nombres);
+		$('#apellidos').html($apellidos);
+	});
+	</script>
+</head>
+<body>
+	<h3>Datos de estudiante:</h3>
+	<span id="codigos"></span>
+	<span id="nombres"></span>
+	<span id="apellidos"></span>
+</body>
+</html>
