@@ -7,9 +7,7 @@ var DamasClasico = {
             containment: "#board",
             snap: ".dama",
             snapMode: "inner",
-            snapTolerance: 40,
-            revert: true,
-            revertDuration: 200
+            revert: true
         });
 
         $('img.dama-azul').draggable('enable');
