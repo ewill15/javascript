@@ -1,5 +1,6 @@
 'use strict';
 
-carApp = angular.module('carApp', [
-    'carAppControllers'
+var carApp = angular.module('carApp', [
+    'carAppControllers',
+    'carAppServices'
 ]);
