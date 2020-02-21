@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="realTempApp">
+    <head>
+        <meta charset=UTF-8>
+        <script src="js/angular.js"></script>
+        <script src="js/app_.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/dependencias.js"></script>
+    </head>
+    <body>
+        <div ng-controller="TempController">
+            <h1>convertidor de temperatura (Educativo )</h1>
+            <form action="#">
+                <label for="">Ingrese la temperatura en grados centigrados</label>
+                <input type="text" ng-model="tempInCelcius">
+                <button ng-click="convertTemperatures()">Convertir</button>
+            </form>
+            <hr>
+            <h2>Como convertir Celsius a Fahrenheit</h2>
+            <h3>Formula usada</h3>
+            <p>F = {{tempInCelcius}} C x 9/5 + 32 </p>
+            <p>Resultado : {{resultInFahreinheit}} F</p>
+
+            <hr>
+            <h2>Como convertir Celsius a Kelvin(Escala Absoluta)</h2>
+            <h2>Formula usada</h2>
+            <p> K = {{tempInCelcius}} C - 273.15 </p>
+            <p>resultado : {{resultInKelvins}} K</p>
+        </div>
+    </body>
+</html>
