@@ -5,7 +5,7 @@ var smartExpresionApp = angular.module('smartExpressionAppController', []);
 smartExpresionApp.controller('EvalController', function($scope){
     $scope.expression = '';
 
-    $scope.expressionns = [
+    $scope.expressions = [
         {
             value: '3*10|currency'
         },
@@ -38,6 +38,6 @@ smartExpresionApp.controller('EvalController', function($scope){
     };
 
     $scope.deleteExp = function(idx){
-        $scope.expression.splice(idx,1)
+        $scope.expressions.splice(idx,1)
     }
 });
