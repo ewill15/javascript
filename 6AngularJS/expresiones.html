@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="smartExpressionApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones</title>
+    <script src="js/angular.js"></script>
+    <script src="js/expresiones/app.js"></script>
+    <script src="js/expresiones/controller.js"></script>
+</head>
+<body>
+    <div ng-controller="EvalController">
+        <h1>Evaluador de Expresiones</h1>
+        <form>
+            <label>Digite la expresion que desee evaluar</label>
+            <br>
+            Expresion: <input type="tel" ng-model="expression">
+            <button ng-click="evaluate()">Evaluar</button>
+        </form>
+
+        <hr>
+        <ul>
+            <li ng-repeat="expression in expressions">
+                <button ng-click="deleteExp($index)">Eliminar</button>
+                {{expression.value}} => <span ng-bind='$parent.$eval(expression.value)'></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
