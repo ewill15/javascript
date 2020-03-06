@@ -1,0 +1,30 @@
+{
+    "manufacter" : {
+        "name": "NISSAN" ,
+        "country": "Japan"
+    },
+    "engine":{
+        "gears": "6",
+        "transmission": "Automatic",
+        "type":"Diesel"
+    },
+    "description":"the all nissan qashqai has been harshly tested to provide the ultimate in robutness, reliability",
+    "id":"new-qashqai",
+    "images":[
+        "img/cars/new qashqai.jpg",
+        "img/cars/new qashqai2.jpg",
+        "img/cars/new qashqai3.jpg"
+    ],
+    "name":"New Qashqai",
+    "sizeAndWeight":{
+        "dimensions":[
+            "1806.9 mm(w)",
+            "1595.8 mm(h)",
+            "4377.4 mm(l)"
+        ],
+        "weight":"2646.0 kg"
+    },
+    "space":{
+        "volumen":"430 l"
+    }
+}

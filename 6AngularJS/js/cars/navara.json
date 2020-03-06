@@ -1,0 +1,29 @@
+{
+    "manufacter" : {
+        "name": "NISSAN" ,
+        "country": "JAPAN"
+    },
+    "engine":{
+        "gears": "6",
+        "transmission": "Manual",
+        "type":"Diesel"
+    },
+    "description":"Navara is all about freedom",
+    "id":"navara",
+    "images":[
+        "img/cars/nisan navara.jpg",
+        "img/cars/nisan navara2.jpg"
+    ],
+    "name":"Navara",
+    "sizeAndWeight":{
+        "dimensions":[
+            "1783.9 mm(w)",
+            "1595.8 mm(h)",
+            "5222.4 mm(l)"
+        ],
+        "weight":"3110.0 kg"
+    },
+    "space":{
+        "volumen":"1130 l"
+    }
+}

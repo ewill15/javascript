@@ -8,7 +8,7 @@ var carAppControllers = angular.module('carAppControllers', []);
 carAppControllers.controller('CarListCtrl', ['$scope', 'Car', '$http',
   	function($scope, Car, $http) {
     	/*Extraemos nuestros vehiculos desde cars.json*/
-  		$http.get('cars/cars.json').success(function(data) {
+  		$http.get('js/cars/cars.json').success(function(data) {
     		$scope.cars = data;
   		});
   	}]);
