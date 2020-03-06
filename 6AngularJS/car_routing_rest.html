@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="carApp"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="">
+
+        <title>CAR APP</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/car_answers/angular.js"></script>
+        <script src="js/angular_route.js"></script>
+        <script src="js/angular_resources.js"></script>
+        <script src="js/car_answers/app.js"></script> <!-- se agrega el modulo -->
+        <script src="js/car_answers/controllers.js"></script> <!--Se agrega un nuevo archivo Controller-->
+        <script src="js/car_answers/services.js"></script> <!-- se agrega los servicios-->
+    </head>
+
+    <body ng-controller="CarListCtrl"> <!-- se enlaza el controlador al body-->
+        <div class="blog-masthead">
+            <div class="container">
+                <div class="blog-nav">
+                    <a class="blog-nav-item active" href="#">CarApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" mg-view></div>
+    </body>
+
+</html>
