@@ -1,0 +1,16 @@
+set time out
+
+pausa  ants de ejecutar un proceso 
+se ejecuta 1 vez
+
+clear timeout
+
+detiene un timeout
+
+set interval 
+ejecuta x milisegundos  una funcion
+returna un obj intervalObject
+
+clear interval 
+detiene un interval
+recibe un intervalObject como argumento
